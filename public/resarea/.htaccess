@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /public/resarea/
+
+Options -Indexes
+
+RewriteRule amministrazione-logout.html	admin.php?cmd=destroy [L]
+RewriteRule amministrazione.html admin.php [L]

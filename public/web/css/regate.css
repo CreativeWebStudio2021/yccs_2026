@@ -1,0 +1,58 @@
+#regattaTitle{font-size:1em; }
+.lines, .lines:before, .lines:after{
+	background:#fff;
+}
+.solo_desk{display:block}
+.solo_mob{display:none}
+
+.bgBox{background-size:100%;}
+
+#lingue{right:30px; top:10px;}
+#menuRegate{background:none;}
+
+@media (min-width: 992px) {
+	#mainMenu{
+		float:none;margin:0 auto; width:225px; height:70px;
+	}	
+}
+
+#logoRegate{
+	width:120px;
+}
+
+@media (max-width: 1200px) {
+	#logoRegate{
+		width:10vw;
+	}
+}
+
+@media (max-width: 991px) {
+	#separatore{display:none;}
+	.solo_desk{display:none}
+	.solo_mob{display:block}
+	ul.main-menu li.dropdown ul.dropdown-menu li.dropdown-submenu  a{
+		color:#fff;
+	}
+		ul.main-menu li.dropdown   a{
+		color:#fff;
+	}
+	#lingue{top:10px; right:50%; margin-right:-23px;}
+	#menuRegate{background:rgba(16,35,93,0.9);}
+	.loghiBottom{width:33%;}
+}
+
+@media (max-width: 900px) {
+	#regattaTitle{font-size:1.5vw; line-height:1px}
+}
+
+@media (max-width: 700px) {
+	#regattaTitle{font-size:1.2vw; line-height:1px}
+	#regattaSubTitle{font-size:2em; margin:0 20px; }
+	.bgBox{background-size:cover;}
+}
+
+@media (max-width: 525px) {
+	#logoRegate{
+		width:52px;
+	}
+}

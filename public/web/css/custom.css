@@ -1,0 +1,31 @@
+/* 
+
+1. Add your custom Css styles below
+2. Place the this code in your template: 
+
+ <link href="css/custom.css" rel="stylesheet">
+
+*/
+.soloMob{display:none}
+.soloDesk{display:block}
+.soloMob991{display:none}
+.soloDesk991{display:block}
+
+@media screen AND (max-width:1199px){
+	.soloMob{display:block}
+	.soloDesk{display:none}
+}
+@media screen AND (max-width:991px){
+	.soloMob991{display:block}
+	.soloDesk991{display:none}
+}
+
+#footer .copyright-content {
+	background-color:#8C8C8C;
+	border-top:solid 1px #989898
+}
+
+.text-grey a:not(.button){	color:#C4C4C4;}
+#footer a:not(.btn):not(:hover){color:#C4C4C4;}
+#footer .widget .widget-title, #footer .widget h4 {	font-size:16px;}
+.heading-text h4{color:#BBBBBB; font-size:25px; line-height:25px;}
