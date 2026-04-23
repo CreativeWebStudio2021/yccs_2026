@@ -123,7 +123,7 @@
 											<h3 style="font-size:20px; line-height:20px; text-transform: uppercase;">{!! $titolo !!}</h3>
 										</a>
 										@if(!empty($testo))
-											<p style="line-height:18px">{!! $testo !!}</p>
+											<p style="line-height:18px; margin-top:5px !important">{!! $testo !!}</p>
 										@endif
 										<a class="read-more" style="font-size:14px; color:#111; font-family:'Open Sans'; font-weight:700" 
 										   title="{{ $titolo }} - News" href="{{ $link_news }}">

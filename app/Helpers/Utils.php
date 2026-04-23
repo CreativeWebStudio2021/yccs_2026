@@ -72,6 +72,20 @@ function smartAssetNews($path, $fallbackHost = 'https://www.yccs.it')
         return asset($cleanPath);
     }
 
+    // Fallback locale aggiuntivo per immagini press regate
+    $pressFolder = "resarea/img_up/regate/press/";
+    $pressPath = $pressFolder . basename(ltrim($path, '/'));
+    if (file_exists(public_path($pressPath))) {
+        return asset($pressPath);
+    }
+
+    // Fallback locale aggiuntivo per immagini in img_up/images
+    $imagesFolder = "resarea/img_up/images/";
+    $imagesPath = $imagesFolder . basename(ltrim($path, '/'));
+    if (file_exists(public_path($imagesPath))) {
+        return asset($imagesPath);
+    }
+
     // Fallback: https://www.yccs.it/resarea/img_up/Buone_feste.jpg
     return rtrim($fallbackHost, '/') . '/' . $cleanPath;
 }
