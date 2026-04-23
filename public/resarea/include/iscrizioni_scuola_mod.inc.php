@@ -188,7 +188,9 @@ else
 				}
 				if($risu_dati['CI'] && $risu_dati['CI']!="") $dati .= "<b>Carta d'identità: </b> : ".$risu_dati['CI']."<br/>";
 				if($risu_dati['CF'] && $risu_dati['CF']!="") $dati .= "<b>Codice Fiscale: </b> : ".$risu_dati['CF']."<br/>";
+				/* TEMP DISABLED: certificato medico
 				if(isset($risu_dati['CM']) && $risu_dati['CM']!="") $dati .= "<b>Certificato medico: </b> : ".$risu_dati['CM']."<br/>";
+				*/
 						
 				$x=1;
 				$query_dati2="SELECT * FROM iscrizioni_scuola WHERE id_rife='$id_rec'";
@@ -233,7 +235,9 @@ else
 					}
 					if($risu_dati2['CI'] && $risu_dati2['CI']!="") $dati .= "<b>Carta d'identità: </b> : ".$risu_dati2['CI']."<br/>";
 					if($risu_dati2['CF'] && $risu_dati2['CF']!="") $dati .= "<b>Codice Fiscale: </b> : ".$risu_dati2['CF']."<br/>";
+					/* TEMP DISABLED: certificato medico familiari
 					if(isset($risu_dati2['CM']) && $risu_dati2['CM']!="") $dati .= "<b>Certificato medico: </b> : ".$risu_dati2['CM']."<br/>";
+					*/
 					
 					$x++;
 				}

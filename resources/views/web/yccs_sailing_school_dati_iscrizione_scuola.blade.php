@@ -35,7 +35,9 @@
 	if(isset($_GET['durata'])) $durata = $_GET['durata']; else  $durata="";
 	if(isset($_GET['CI'])) $CI = $_GET['CI']; else  $CI="";
 	if(isset($_GET['CF'])) $CF = $_GET['CF']; else  $CF="";
+/* TEMP DISABLED: certificato medico upload
 if(isset($_GET['CM'])) $CM = $_GET['CM']; else  $CM="";
+*/
 	
 	if($id_ute!=""){ 
 		$query_isc = DB::table('iscrizioni_scuola')
@@ -1280,28 +1282,32 @@ if(isset($_GET['CM'])) $CM = $_GET['CM']; else  $CM="";
 			
 			
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-6">
 					<div class="form-group">
 						<label class="upper" for="name"><?php if($lingua=="ita"){?>Carta D'identità<?php }else{?>Identity document<?php }?></label>
 						<input type="file" class="form-control"  style="height:50px" name="<?php echo $id_pers;?>_CI" id="<?php echo $id_pers;?>_CI" value="<?php echo $CI;?>">
 					</div>
 				</div>	
-				<div class="col-md-4">
+				<div class="col-md-6">
 					<div class="form-group">
 						<label class="upper" for="name"><?php if($lingua=="ita"){?>Codice Fiscale<?php }else{?>Tax code<?php }?></label>
 						<input type="file" class="form-control"  style="height:50px"  name="<?php echo $id_pers;?>_CF" id="<?php echo $id_pers;?>_CF" value="<?php echo $CF;?>">
 					</div>
 				</div>
+				<?php /*
 				<div class="col-md-4">
 					<div class="form-group">
 						<label class="upper" for="name"><?php if($lingua=="ita"){?>Certificato medico*<?php }else{?>Medical certificate*<?php }?></label>
 						<input type="file" class="form-control" style="height:50px" name="<?php echo $id_pers;?>_CM" id="<?php echo $id_pers;?>_CM" value="<?php echo $CM;?>">
 					</div>
 				</div>
+				*/?>
 			</div>
+			<?php /*
 			<script>
 				window["<?php echo $id_pers;?>_CM_existing"] = "<?php echo addslashes($CM);?>";
 			</script>
+			*/?>
 		</div>		
 	</div>
 </div>

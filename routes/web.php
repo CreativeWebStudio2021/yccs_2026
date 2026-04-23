@@ -262,6 +262,12 @@ Route::get('regate-{anno_regata}/{nome_regata}-{id_dett}/{tipo_doc}-{id_doc}/{no
 	Route::get('en/regattas-{anno_regata}/{nome_regata}-{id_dett}/{tipo_doc}-{id_doc}/{nome_doc}', [RegateController::class, 'linkFisso']);
 	Route::get('en/regate-{anno_regata}/{nome_regata}-{id_dett}/{tipo_doc}-{id_doc}/{nome_doc}', [RegateController::class, 'linkFisso']);
 
+Route::get('regate-{anno_regata}/press/{nome_regata}-{id_dett}.html', [RegateController::class, 'comunicati_regata']);
+	Route::get('en/regattas-{anno_regata}/press/{nome_regata}-{id_dett}.html', [RegateController::class, 'comunicati_regata']);	
+Route::get('regate-{anno_regata}/press/{nome_regata}-{id_dett}/{titolo_press}-{id_press}.html', [RegateController::class, 'post_regata']);
+	Route::get('en/regattas-{anno_regata}/press/{nome_regata}-{id_dett}/{titolo_press}-{id_press}.html', [RegateController::class, 'post_regata']);
+Route::get('regate-{anno_regata}/fotogallery/{nome_regata}-{id_dett}.html', [RegateController::class, 'fotogallery_regata']);
+	Route::get('en/regattas-{anno_regata}/fotogallery/{nome_regata}-{id_dett}.html', [RegateController::class, 'fotogallery_regata']);	
 
 Route::get('regate-{anno_regata}/{sez}/{nome_regata}-{id_dett}.html', [RegateController::class, 'regateSez']);
 	Route::get('en/regattas-{anno_regata}/{sez}/{nome_regata}-{id_dett}.html', [RegateController::class, 'regateSez']);	

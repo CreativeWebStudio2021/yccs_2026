@@ -122,10 +122,13 @@
 	@endif
 
 	var ind=0;
+var totalPress = (typeof img !== "undefined" && Array.isArray(img)) ? img.length : 0;
 	$("#newsArrow").click(function(){
 		nextPress();
 	})
 	function nextPress(){
+	if (totalPress === 0) return;
+
 		$("#newsDate").css({"display":"none"});
 		$("#newsTitle").css({"display":"none"});
 		$("#newsImg").css({"display":"none"});
@@ -137,8 +140,7 @@
 		$("#newsImg").fadeIn(800);
 		$("#newsDate").fadeIn(800);
 		$("#newsTitle").fadeIn(800);
-		ind++;
-		if(ind==5) ind=0;
+	ind = (ind + 1) % totalPress;
 	}
 	<?php if($num_press>0){?> nextPress();<?php }?>
 </script>

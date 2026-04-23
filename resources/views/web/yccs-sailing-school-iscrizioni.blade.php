@@ -76,6 +76,7 @@
 	if(!isset($password)) $password="";
 	if(!isset($CI)) $CI="";
 	if(!isset($CF)) $CF="";
+	// TEMP DISABLED: certificato medico upload (inizializzato per evitare undefined variable)
 	if(!isset($CM)) $CM="";
 
 	$data=date("Y-m-d H:i:s");
@@ -706,7 +707,7 @@
 										durata : '<?php echo $durata;?>',
 										CI : '<?php echo $CI;?>',
 										CF : '<?php echo $CF;?>',
-										CM : '<?php echo $CM;?>',
+										/* TEMP DISABLED: CM */
 										
 										fam : '<?php echo $fam;?>'
 									}, 
@@ -757,7 +758,9 @@
 						else if ((document.getElementById(ind+'_gia_tesserato').value=="" || document.getElementById(ind+'_gia_tesserato').value=="no") && (document.getElementById(ind+'_tesseramento').value=="no" || document.getElementById(ind+'_tesseramento').value=="")) alert('<?php if($lingua=="eng"){?>Inserire la richiesta della Tessera FIV o specificare di essere già tesserati FIV<?php }else{?>Inserire la richiesta della Tessera FIV o specificare di essere già tesserati FIV<?php }?>');
 						else if (document.getElementById(ind+'_gia_tesserato').value=="si" && document.getElementById(ind+'_circolo').value=="") alert('<?php if($lingua=="eng"){?>Inserisci il nome del Circolo con il quale sei tesserato<?php } else {?>Inserisci il nome del Circolo con il quale sei tesserato<?php }?>');
 						else if ((document.getElementById(ind+'_durata').value=="Ho già fatto la prima settimana" || document.getElementById(ind+'_durata').value=="I've already done the first week") &&  document.getElementById(ind+'_num_settimane_2').value==""  &&  document.getElementById(ind+'_num_giorni_2').value=="" ) alert('<?php if($lingua=="eng"){?>Please insert number of weeks or days following the first week<?php } else {?>Inserire settimane o giorni successivi alla prima settimana<?php }?>');
+						/* TEMP DISABLED: validazione obbligatoria certificato medico
 						else if (document.getElementById(ind+'_CM').value=="" && (!window[ind+'_CM_existing'] || window[ind+'_CM_existing']=="")) alert('<?php if($lingua=="eng"){?>"Medical certificate" required<?php } else {?>Campo "Certificato medico" obbligatorio<?php }?>');
+						*/
 						else if (document.getElementById(ind+'_tesseramento').value!="si" && document.getElementById(ind+'_tipo').value=="" && (document.getElementById(ind+'_extra_box').style.display=='none' || (document.getElementById(ind+'_extra_box').style.display=='block' && parseInt(document.getElementById(ind+'_num_extra').value)<1))) alert('<?php if($lingua=="eng"){?>"Type of Courses" or "FIV Card" required<?php } else {?>Campo "Tipologia del corso" o "Tessera FIV" obbligatorio<?php }?>');
 						else check++;
 								
@@ -782,7 +785,9 @@
 									else if ((document.getElementById(ind+'_gia_tesserato').value=="" || document.getElementById(ind+'_gia_tesserato').value=="no") && (document.getElementById(ind+'_tesseramento').value=="no" || document.getElementById(ind+'_tesseramento').value=="")) alert('<?php if($lingua=="eng"){?>Fiv Card or Club Name for Additional member of the family'+(ind-1)+'<?php }else{?>Inserire la richiesta della Tessera FIV o specificare di essere già tesserati FIV per Familiare Aggiuntivo'+(ind-1)+'<?php }?>');
 									else if (document.getElementById(ind+'_gia_tesserato').value=="si" && document.getElementById(ind+'_circolo').value=="") alert('<?php if($lingua=="eng"){?>Club Name for Additional member of the family'+(ind-1)+'<?php } else {?>Inserisci il nome del Circolo con il quale sei tesserato<?php }?>');
 									else if ((document.getElementById(ind+'_durata').value=="Ho già fatto la prima settimana" || document.getElementById(ind+'_durata').value=="I've already done the first week") &&  document.getElementById(ind+'_num_settimane_2').value==""  &&  document.getElementById(ind+'_num_giorni_2').value=="" ) alert('<?php if($lingua=="eng"){?>Please insert number of weeks or days following the first week for Additional member of the family'+(ind-1)+'<?php } else {?>Inserire settimane o giorni successivi alla prima settimana per Familiare Aggiuntivo'+(ind-1)+'<?php }?>');
+									/* TEMP DISABLED: validazione obbligatoria certificato medico familiari
 									else if (document.getElementById(ind+'_CM').value=="" && (!window[ind+'_CM_existing'] || window[ind+'_CM_existing']=="")) alert('<?php if($lingua=="eng"){?>"Medical certificate" required for Additional member of the family '+(ind-1)+'<?php } else {?>Campo "Certificato medico" Familiare Aggiuntivo '+(ind-1)+' obbligatorio<?php }?>');
+									*/
 									else if (document.getElementById(ind+'_tesseramento').value!="si" && document.getElementById(ind+'_tipo').value=="" && (document.getElementById(ind+'_extra_box').style.display=='none' || (document.getElementById(ind+'_extra_box').style.display=='block' && parseInt(document.getElementById(ind+'_num_extra').value)<1))) alert('<?php if($lingua=="eng"){?>"Type of Courses" or "FIV Card" required<?php } else {?>Campo "Tipologia del corso" o "Tessera FIV" obbligatorio<?php }?>');
 									else check++;
 								}

@@ -243,7 +243,8 @@ if(isset($_GET['id_canc'])) $id_canc=$_GET['id_canc']; else $id_canc="";
 				</script>
 			</div>
 		</div>
-	<?php } elseif($tipo=="CM"){
+	<?php /* TEMP DISABLED: popup certificato medico
+	} elseif($tipo=="CM"){
 		$query="SELECT CM FROM iscrizioni_scuola WHERE id='$id_doc'";	
 		$resu=$open_connection->connection->query($query);
 		list($n_CM)=$resu->fetch();
@@ -288,7 +289,7 @@ if(isset($_GET['id_canc'])) $id_canc=$_GET['id_canc']; else $id_canc="";
 				</script>
 			</div>
 		</div>
-	<?php } elseif($tipo=="pagamento"){
+	<?php */ } elseif($tipo=="pagamento"){
 		if(isset($_GET['metodo'])) $metodo=$_GET['metodo']; else $metodo="";
 		if($metodo!=""){
 			$query_up="UPDATE iscrizioni_scuola SET pagamento='$metodo' WHERE id='$id_doc'";

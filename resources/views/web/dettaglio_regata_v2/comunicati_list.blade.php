@@ -1,5 +1,5 @@
-@include('web.common.functions')
-@extends('web.layout')
+@include('web.common.v2.functions')
+@extends('web.index')
 
 @section('content')
 	@php
@@ -57,9 +57,9 @@
 						<!-- Blog image post-->
 						<div class="post-item border">
 							<div class="post-item-wrap">
-								@if (!empty($risu_press['foto1'])
+								@if (!empty($risu_press['foto1']))
 									@php
-										if(is_file("resarea/img_up/regate/press/".$risu_press['foto1']) 
+										if(is_file("resarea/img_up/regate/press/".$risu_press['foto1'])) 
 											$ante = "resarea/img_up/regate/press/".$risu_press['foto1'];
 										else $ante  = "https://www.yccs.it/resarea/img_up/regate/press/".$risu_press['foto1'];
 									@endphp

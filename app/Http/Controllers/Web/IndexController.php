@@ -1284,7 +1284,9 @@ class IndexController extends Controller
 			if(isset($_POST['password'])) $password=$_POST['password']; else $password="";
 			if(isset($_POST['CI'])) $CI=$_POST['CI']; else $CI="";
 			if(isset($_POST['CF'])) $CF=$_POST['CF']; else $CF="";
+			/* TEMP DISABLED: certificato medico
 			if(isset($_POST['CM'])) $CM=$_POST['CM']; else $CM="";
+			*/
 			if(isset($_POST['codice_old'])) $codice_old=$_POST['codice_old']; else $codice_old="";
 			
 			$data=date("Y-m-d H:i:s");
@@ -1514,7 +1516,9 @@ class IndexController extends Controller
 					}
 					if($query_dati[0]->CI && $query_dati[0]->CI!="") $dati .= "<b>Carta d'identità: </b> : ".$query_dati[0]->CI."<br/>";
 					if($query_dati[0]->CF && $query_dati[0]->CF!="") $dati .= "<b>Codice Fiscale: </b> : ".$query_dati[0]->CF."<br/>";
+					/* TEMP DISABLED: certificato medico
 					if(isset($query_dati[0]->CM) && $query_dati[0]->CM!="") $dati .= "<b>Certificato medico: </b> : ".$query_dati[0]->CM."<br/>";
+					*/
 					
 					
 					$dati_eng.="
@@ -1555,7 +1559,9 @@ class IndexController extends Controller
 					}
 					if($query_dati[0]->CI && $query_dati[0]->CI!="") $dati_eng .= "<b>Identity document: </b> : ".$query_dati[0]->CI."<br/>";
 					if($query_dati[0]->CF && $query_dati[0]->CF!="") $dati_eng .= "<b>Tax code: </b> : ".$query_dati[0]->CF."<br/>";
+					/* TEMP DISABLED: medical certificate
 					if(isset($query_dati[0]->CM) && $query_dati[0]->CM!="") $dati_eng .= "<b>Medical certificate: </b> : ".$query_dati[0]->CM."<br/>";
+					*/
 					
 					$x=1;
 					$query_dati2 = DB::table('iscrizioni_scuola')
@@ -1603,7 +1609,9 @@ class IndexController extends Controller
 							}
 							if($value_dati2->CI && $value_dati2->CI!="") $dati .= "<b>Carta d'identità: </b> : ".$value_dati2->CI."<br/>";
 							if($value_dati2->CF && $value_dati2->CF!="") $dati .= "<b>Codice Fiscale: </b> : ".$value_dati2->CF."<br/>";
+							/* TEMP DISABLED: certificato medico familiari
 							if(isset($value_dati2->CM) && $value_dati2->CM!="") $dati .= "<b>Certificato medico: </b> : ".$value_dati2->CM."<br/>";
+							*/
 							
 							$dati_eng.="
 							<br/><b>Additional member of the family $x</b><br/>";
@@ -1643,7 +1651,9 @@ class IndexController extends Controller
 							}
 							if($value_dati2->CI && $value_dati2->CI!="") $dati_eng .= "<b>Identity document: </b> : ".$value_dati2->CI."<br/>";
 							if($value_dati2->CF && $value_dati2->CF!="") $dati_eng .= "<b>Tax code: </b> : ".$value_dati2->CF."<br/>";
+							/* TEMP DISABLED: medical certificate family members
 							if(isset($value_dati2->CM) && $value_dati2->CM!="") $dati_eng .= "<b>Medical certificate: </b> : ".$value_dati2->CM."<br/>";
+							*/
 							
 							$x++;
 						}
@@ -1809,7 +1819,9 @@ class IndexController extends Controller
 					}
 					if($query_dati[0]->CI && $query_dati[0]->CI!="") $dati .= "<b>Carta d'identità: </b> : ".$query_dati[0]->CI."<br/>";
 					if($query_dati[0]->CF && $query_dati[0]->CF!="") $dati .= "<b>Codice Fiscale: </b> : ".$query_dati[0]->CF."<br/>";
+					/* TEMP DISABLED: certificato medico
 					if(isset($query_dati[0]->CM) && $query_dati[0]->CM!="") $dati .= "<b>Certificato medico: </b> : ".$query_dati[0]->CM."<br/>";
+					*/
 					
 					
 					$dati_eng.="
@@ -1851,7 +1863,9 @@ class IndexController extends Controller
 					}
 					if($query_dati[0]->CI && $query_dati[0]->CI!="") $dati_eng .= "<b>Identity document: </b> : ".$query_dati[0]->CI."<br/>";
 					if($query_dati[0]->CF && $query_dati[0]->CF!="") $dati_eng .= "<b>Tax code: </b> : ".$query_dati[0]->CF."<br/>";
+					/* TEMP DISABLED: medical certificate
 					if(isset($query_dati[0]->CM) && $query_dati[0]->CM!="") $dati_eng .= "<b>Medical certificate: </b> : ".$query_dati[0]->CM."<br/>";
+					*/
 					
 					$x=1;
 					$query_dati2 = DB::table('iscrizioni_scuola')
@@ -1900,7 +1914,9 @@ class IndexController extends Controller
 							}
 							if($value_dati2->CI && $value_dati2->CI!="") $dati .= "<b>Carta d'identità: </b> : ".$value_dati2->CI."<br/>";
 							if($value_dati2->CF && $value_dati2->CF!="") $dati .= "<b>Codice Fiscale: </b> : ".$value_dati2->CF."<br/>";
+							/* TEMP DISABLED: certificato medico familiari
 							if(isset($value_dati2->CM) && $value_dati2->CM!="") $dati .= "<b>Certificato medico: </b> : ".$value_dati2->CM."<br/>";
+							*/
 							
 							$dati_eng.="
 							<br/><b>Additional member of the family $x</b><br/>";
@@ -1941,7 +1957,9 @@ class IndexController extends Controller
 							}
 							if($value_dati2->CI && $value_dati2->CI!="") $dati_eng .= "<b>Identity document: </b> : ".$value_dati2->CI."<br/>";
 							if($value_dati2->CF && $value_dati2->CF!="") $dati_eng .= "<b>Tax code: </b> : ".$value_dati2->CF."<br/>";
+							/* TEMP DISABLED: medical certificate family members
 							if(isset($value_dati2->CM) && $value_dati2->CM!="") $dati_eng .= "<b>Medical certificate: </b> : ".$value_dati2->CM."<br/>";
+							*/
 							
 							$x++;
 						}
@@ -2079,7 +2097,9 @@ class IndexController extends Controller
 		if(isset($password) && $password!='') $view->with('password', $password);
 		if(isset($CI) && $CI!='') $view->with('CI', $CI);
 		if(isset($CF) && $CF!='') $view->with('CF', $CF);
+		/* TEMP DISABLED: certificato medico
 		if(isset($CM) && $CM!='') $view->with('CM', $CM);
+		*/
 		
 		$view = $view->with('message_color', $message_color);
 		$view = $view->withErrors($message);
@@ -2196,7 +2216,9 @@ class IndexController extends Controller
 				}
 				if($query_dati[0]->CI && $query_dati[0]->CI!="") $dati .= "<b>Carta d'identità: </b> : ".$query_dati[0]->CI."<br/>";
 				if($query_dati[0]->CF && $query_dati[0]->CF!="") $dati .= "<b>Codice Fiscale: </b> : ".$query_dati[0]->CF."<br/>";
+				/* TEMP DISABLED: certificato medico
 				if(isset($query_dati[0]->CM) && $query_dati[0]->CM!="") $dati .= "<b>Certificato medico: </b> : ".$query_dati[0]->CM."<br/>";
+				*/
 				
 				
 				$dati_eng.="
@@ -2238,7 +2260,9 @@ class IndexController extends Controller
 				}
 				if($query_dati[0]->CI && $query_dati[0]->CI!="") $dati_eng .= "<b>Identity document: </b> : ".$query_dati[0]->CI."<br/>";
 				if($query_dati[0]->CF && $query_dati[0]->CF!="") $dati_eng .= "<b>Tax code: </b> : ".$query_dati[0]->CF."<br/>";
+				/* TEMP DISABLED: medical certificate
 				if(isset($query_dati[0]->CM) && $query_dati[0]->CM!="") $dati_eng .= "<b>Medical certificate: </b> : ".$query_dati[0]->CM."<br/>";
+				*/
 				
 				$x=1;
 				$query_dati2 = DB::table('iscrizioni_scuola')
@@ -2287,7 +2311,9 @@ class IndexController extends Controller
 						}
 						if($value_dati2->CI && $value_dati2->CI!="") $dati .= "<b>Carta d'identità: </b> : ".$value_dati2->CI."<br/>";
 						if($value_dati2->CF && $value_dati2->CF!="") $dati .= "<b>Codice Fiscale: </b> : ".$value_dati2->CF."<br/>";
+						/* TEMP DISABLED: certificato medico familiari
 						if(isset($value_dati2->CM) && $value_dati2->CM!="") $dati .= "<b>Certificato medico: </b> : ".$value_dati2->CM."<br/>";
+						*/
 						
 						$dati_eng.="
 						<br/><b>Additional member of the family $x</b><br/>";
@@ -2328,7 +2354,9 @@ class IndexController extends Controller
 						}
 						if($value_dati2->CI && $value_dati2->CI!="") $dati_eng .= "<b>Identity document: </b> : ".$value_dati2->CI."<br/>";
 						if($value_dati2->CF && $value_dati2->CF!="") $dati_eng .= "<b>Tax code: </b> : ".$value_dati2->CF."<br/>";
+						/* TEMP DISABLED: medical certificate family members
 						if(isset($value_dati2->CM) && $value_dati2->CM!="") $dati_eng .= "<b>Medical certificate: </b> : ".$value_dati2->CM."<br/>";
+						*/
 						
 						$x++;
 					}

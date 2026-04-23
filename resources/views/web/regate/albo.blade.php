@@ -25,7 +25,7 @@
 			<a href="<?php if(str_replace("http://","",$link)==$link && str_replace("https://","",$link)==$link){?><?php echo config('app.url');?><?php }?><?php echo $link?>" target="_blank">											
 				<div data-space="1-1"  class="link-regata">
 					<div style="display:flex; z-index:1; align-items:center; justify-content:space-between;">
-						<h4><?php if($lingua=="ita"){?>Programma<?php }else{?>Programme<?php }?></h4>								
+						<h4><?php if($lingua=="ita"){?>Albo d'Oro<?php }else{?>Palmares<?php }?></h4>								
 						<img src="{{ asset('web/images/freccia_thin_up.png') }}" class="arrow-link-regata">
 						<img src="{{ asset('web/images/close.png') }}" class="close-link-regata">
 					</div>

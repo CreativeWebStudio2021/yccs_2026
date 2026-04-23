@@ -759,7 +759,7 @@ class RegateController extends Controller
 			$colore_testo_rgb=$CustomController->hex2rgb($colore_testo);
 			$colore_testo_rgb=$colore_testo_rgb[0].",".$colore_testo_rgb[1].",".$colore_testo_rgb[2];
 			
-			$bladeView="web.dettaglio_regata.comunicati_list";
+			$bladeView="web.dettaglio_regata_v2.comunicati_list";
 			
 			$metatag['title'] = Lang::get("website.comunicati stampa",[],$locale)." - ".$query_ed[0]->nome_regata." - ".$anno_regata." - ".$query_ed[0]->luogo;
 			$metatag['description'] = Lang::get("website.comunicati stampa",[],$locale)." - ".$query_ed[0]->nome_regata." - ".$anno_regata." - ".$query_ed[0]->luogo;			

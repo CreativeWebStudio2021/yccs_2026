@@ -373,7 +373,9 @@ if($azione=="cancella_sel") {
 									<span class="btn btn-small" style="cursor:pointer; <?php if($arr_ele['status']=="pagato"){?>color:green<?php }?>" title="<?php if($arr_ele['status']!="pagato"){?>Non <?php }?>Pagato" onclick="ins_doc('pagamento','<?php echo $id_campo;?>')"><i class="fa fa-euro"></i></span>									
 									<span class="btn btn-small"  title="Carta d'identità  <?php if(!$arr_ele['CI'] || trim($arr_ele['CI'])==""){?>non<?php }?> inviata" <?php if($arr_ele['CI'] && trim($arr_ele['CI'])!=""){?>style="color:green"<?php }?> onclick="ins_doc('CI','<?php echo $id_campo;?>')"><i class="fa fa-id-card" aria-hidden="true"></i></span>									
 									<span class="btn btn-small"  title="Codice Fiscale <?php if(!$arr_ele['CF'] || trim($arr_ele['CF'])==""){?>non<?php }?> inviato" <?php if($arr_ele['CF'] && trim($arr_ele['CF'])!=""){?>style="color:green"<?php }?> onclick="ins_doc('CF','<?php echo $id_campo;?>')"><i class="fa fa-credit-card-alt" aria-hidden="true"></i></span>									
+									<?php /* TEMP DISABLED: icona certificato medico
 									<span class="btn btn-small"  title="Certificato medico <?php if(!$arr_ele['CM'] || trim($arr_ele['CM'])==""){?>non<?php }?> inviato" style="color:<?php if($arr_ele['CM'] && trim($arr_ele['CM'])!=""){?>green<?php }else{?>#808080<?php }?>;" onclick="ins_doc('CM','<?php echo $id_campo;?>')"><i class="fa fa-heartbeat" aria-hidden="true"></i></span>
+									*/?>
 									<span class="btn btn-small"  title="Invia link Pagamento" onclick="ins_doc('invio_pagamento','<?php echo $id_campo;?>');"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
 									
 									<a href="admin.php?cmd=<?php echo $table;?>_mod&id_rec=<?php  echo $id_campo; ?><?php echo $rif;?>" title="Vedi dati" class="btn btn-small"><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
@@ -448,7 +450,9 @@ if($azione=="cancella_sel") {
 									<span class="btn-group">
 										<span class="btn btn-small"  title="Carta d'identità  <?php if(!$arr_sub['CI'] || trim($arr_sub['CI'])==""){?>non<?php }?> inviata" <?php if($arr_sub['CI'] && trim($arr_sub['CI'])!=""){?>style="color:green"<?php }?> onclick="ins_doc('CI','<?php echo $id_campo_sub;?>')"><i class="fa fa-id-card" aria-hidden="true"></i></span>										
 										<span class="btn btn-small"  title="Codice Fiscale <?php if(!$arr_sub['CF'] || trim($arr_sub['CF'])==""){?>non<?php }?> inviato" <?php if($arr_sub['CF'] && trim($arr_sub['CF'])!=""){?>style="color:green"<?php }?> onclick="ins_doc('CF','<?php echo $id_campo_sub;?>')"><i class="fa fa-credit-card-alt" aria-hidden="true"></i></span>
+										<?php /* TEMP DISABLED: icona certificato medico familiari
 										<span class="btn btn-small"  title="Certificato medico <?php if(!$arr_sub['CM'] || trim($arr_sub['CM'])==""){?>non<?php }?> inviato" style="color:<?php if($arr_sub['CM'] && trim($arr_sub['CM'])!=""){?>green<?php }else{?>#808080<?php }?>;" onclick="ins_doc('CM','<?php echo $id_campo_sub;?>')"><i class="fa fa-heartbeat" aria-hidden="true"></i></span>
+										*/?>
 									</span>
 								</td>
 							</tr>
